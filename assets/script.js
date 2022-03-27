@@ -18,7 +18,7 @@ var getRandomLower = function (){
 var getRandomUpper = function (){
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 };
-console.log (getRandomUpper.value);
+console.log (getRandomUpper);
   
 var getRandomNumber = function (){
     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
@@ -89,12 +89,12 @@ function writePassword() {
     //     var passwordText = Math.floor(Math.random() * passwordLength);
     //     password += chars.substring(randomNumber, randomNumber +1);
     // }
-    var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    var string_length = 8;
-    var randomstring = '';
-    for (var i=0; i<string_length; i++) {
-        var rnum = Math.floor(Math.random() * chars.length);
-        randomstring += chars.substring(rnum,rnum+1);
+    // var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    // var string_length = 8;
+    var passwordText = '';
+    for (var i=0; i<passwordLength; i++) {
+        var rnum = Math.floor(Math.random() * passphrase.length);
+        passwordText += passphrase.substring(rnum,rnum+1);
     }
 
     // if (window.confirm == "true")
