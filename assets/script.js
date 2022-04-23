@@ -1,14 +1,26 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var password = document.getElementById('password');
+//assign global variable
+var length = document.getElementById('numCharacters');
+var lowercase = document.getElementById('incLowercase');
+var uppercase = document.getElementById('incUppercase');
+var numbers = document.getElementById('incNumbers');
+var symbols = document.getElementById('incSymbols');
+var form = document.getElementById('passwordForm');
+var passwordText = document.getElementById('password'); 
 
-// const randomFunct = {
-//     lower: getRandomLower,
-//     upper: getRandomUpper,
-//     number: getRandomNumber,
-//     symbol: getRandomSymbol,
-// };
+// var password = document.getElementById('password');
+
+const randomFunct = {
+    lower: getRandomLower,
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    symbol: getRandomSymbol
+};
+
+// Add event listener to generate button 
+generateBtn.addEventListener("click", () => {
 
 //generate functions for each character type string
 var getRandomLower = function (){
