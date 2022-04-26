@@ -10,8 +10,6 @@ function writePassword() {
 }
 
 
-// var incSymbols = symbols.checked;
-
 function generatePassword() {
     var passwordValue = "";
     var characters = {
@@ -120,121 +118,19 @@ function checkIfAllPresent(allPresent, password, characters) {
     }
   
     return afterCheckPresent;
-  }
+}
   
-  // Generates the password string using random integers
-  function generateString(criteria, passwordLength) {
+// Generates the password string using random integers
+function generateString(criteria, passwordLength) {
     var password="";
     for (var i=0; i<passwordLength; i++) {
       var randomInt = Math.floor(Math.random() * criteria.length);
       password += criteria[randomInt];
     }
     return password;
-  }
-  
-  // Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword);
-
-
-
-//Set get password character from user
-// if(numCharacters <8 || numCharacters >128) {
-//     return alert("Please enter a number from 8-128 characters.")
-//   } else {
-//     passwordText.innerText = generatePassword(numCharacters, incLowercase, incUppercase, incNumbers, incSymbols);}
-  
-//   });
-
-
-
-
-
-
-
-// //generate functions for each character type string
-// var getRandomLower = function (){
-//     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-// };
-  
-// var getRandomUpper = function (){
-//     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-// };
-// console.log (getRandomUpper);
-  
-// var getRandomNumber = function (){
-//     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-// };
-  
-// var getRandomSymbol = function (){
-//     var text= '';
-//     const symbol=["!", '"', "#", "$", "%", "&", "'", "(", ")", "*", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
-//     text+= symbol.charAt[Math.floor(Math.random() * symbol.length)];
-//     console.log (text);
-//     return text;
-// };
-
-
-// console.log (password.length);
-
-// includeLowercase = false;
-// includeUppercase = false;
-// includeNumber = false;
-// includeSymbol = false;
-
-// if (passwordLength = null) {
-
-
-
-var passphrase = '';
-// passphrase.push.apply(passphrase, getRandomLower);
-// myArray.push.apply(
-
-if (includeLowercase) {
-   passphrase = passphrase.concat(getRandomLower); 
 }
-
-if (includeUppercase) {
-    passphrase = passphrase.concat(getRandomUpper); 
-}
-
-if (includeNumber) {
-    passphrase = passphrase.concat(getRandomNumber); 
-}
-
-if (includeSymbol) {
-    passphrase = passphrase.concat(getRandomSymbol); 
-}
-
-console.log (passphrase);
-
-// Write password to the #password input
-function writePassword() {
-    var passwordText = document.querySelector("#password");
-    
-    
-    
-
-
-    // for (var i = 0; i <= passwordLength; i++) {
-    //     var passwordText = Math.floor(Math.random() * passwordLength);
-    //     password += chars.substring(randomNumber, randomNumber +1);
-    // }
-    // var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    // var string_length = 8;
-    var passwordText = '';
-    for (var i=0; i<passwordLength; i++) {
-        var rnum = Math.floor(Math.random() * passphrase.length);
-        passwordText += passphrase.substring(rnum,rnum+1);
-    }
-
-    // if (window.confirm == "true")
-
-    passwordText.value = password;
-
-    return password;
-
-    // passwordText.value = password;
-}
-
+  
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
